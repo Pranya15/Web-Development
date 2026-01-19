@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            height: 500px;
+            width: 300px;
+            position: relative;
+            margin: 10px auto;
+            z-index: 2;
+            transition: 3s;
+            transform-style: preserve-3d;
+
+        }
+        #main:hover{
+            transform: rotateY(180deg);
+        }
+
+        #cardA{
+            height: 50%;
+            width: 100%;
+            position: absolute;
+            z-index: 6;
+            backface-visibility: hidden;
+        }
+        img{
+            height: 100%;
+            width: 100%;
+        }
+        #cardB{
+            height: 50%;
+            width: 100%;
+            position: absolute;
+            background-color: rgb(179, 243, 221);
+            z-index: 5;
+            transform: rotateY(180deg);
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="cardA"><img src="water.avif"/></div>
+        <div id="cardB">Hii myself Pranyaa!!</div> 
+    </div>
+</body>
+</html>
