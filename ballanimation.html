@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        div{
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+             background: linear-gradient(
+             90deg,
+            pink 0%,
+            rgb(252, 170, 184) 35%,
+            rgb(247, 131, 150) 70%,
+            rgb(249, 102, 127) 100%
+    );
+            border: 3px solid black;
+            animation-name: PP;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            transition: 3s;
+            transform: rotate(180deg);
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+
+        }
+        @keyframes PP {
+            0%{
+                transform: translateY(50px);
+            }
+            50%{
+                transform: translateY(500px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
