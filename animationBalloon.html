@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Balloon Festival</title>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        height: 100vh;
+        overflow: hidden;
+        background: linear-gradient(#57d9ed, #e4f8f7);
+        position: relative;
+        font-family: Arial, sans-serif;
+    }
+
+    
+    #ground{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 120px;
+        background: rgb(48, 168, 48);
+    }
+
+    
+    #sun{
+        position: absolute;
+        top: 60px;
+        right: 80px;
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+        background: radial-gradient(circle, orange, red);
+    }
+
+    
+    h1{
+        position: absolute;
+        top: 30px;
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-size: 40px;
+        text-shadow: 2px 2px 5px black;
+    }
+
+    
+    .balloon{
+        position: absolute;
+        bottom: -150px;
+        width: 60px;
+        height: 80px;
+        border-radius: 50% 50% 50% 50%;
+        animation: fly 18s linear infinite;
+    }
+
+    .balloon::after{
+        content: "";
+        position: absolute;
+        bottom: -40px;
+        left: 50%;
+        width: 2px;
+        height: 40px;
+        background: #555;
+    }
+
+    
+    .red{ background: red; left: 10%; animation-duration: 16s; }
+    .blue{ background: dodgerblue; left: 25%; animation-duration: 18s; }
+    .yellow{ background: gold; left: 40%; animation-duration: 20s; }
+    .pink{ background: hotpink; left: 55%; animation-duration: 17s; }
+    .purple{ background: purple; left: 65%; animation-duration: 19s; }
+    .orange{ background: orange; left: 75%; animation-duration: 21s; }
+    .green{ background: limegreen; left: 85%; animation-duration: 22s; }
+
+    
+    @keyframes fly{
+        0%{
+            transform: translateY(0);
+            opacity: 1;
+        }
+        100%{
+            transform: translateY(-900px);
+            opacity: 0.9;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<h1>🎈 Balloon Festival 🎈</h1>
+
+<div id="sun"></div>
+
+
+<div class="balloon red"></div>
+<div class="balloon blue"></div>
+<div class="balloon yellow"></div>
+<div class="balloon pink"></div>
+<div class="balloon purple"></div>
+<div class="balloon orange"></div>
+<div class="balloon green"></div>
+
+<div id="ground"></div>
+
+</body>
+</html>
