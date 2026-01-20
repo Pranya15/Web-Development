@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIDS LEARN</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        body{
+            background-color: rgb(242, 231, 215);
+        }
+        .S{
+       height: 100px;
+            width: 100px;
+            border-radius: 40px;
+            background-color: rgb(215, 233, 117);
+            color: rgb(7, 1, 1);
+            font-size: 15px;
+            font-weight: bolder;
+            position: relative;
+            right: 140px;
+            bottom: 20px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 130px;
+            bottom: 60px;
+            left: 1px;
+
+            pointer-events: auto;
+            cursor: pointer;
+            z-index: 10;
+}
+
+        #navbar{
+            height: 90px;
+            border-radius: 8px;
+            background: linear-gradient(
+            90deg,#753eeb 0%,  #8b4fe9 40%,
+            #c15be6 75%,
+            #e56bbd 100%);
+            display:flex;
+            align-items:center;
+            padding:0 24px;
+            color:white;
+            font-weight:600;
+            font-size:20px;
+            z-index: 1;
+            position: relative;
+            
+        }
+
+            #book{
+             height: 50px;
+             display:flex;
+             align-items:center;
+            font-family: Arial, Helvetica, sans-serif;
+            color:white;
+            font-weight:bolder;
+            font-size:30px;
+            transition:  transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            #book:hover{
+            transform: translateY(-10px);   
+        }
+           
+            #book1{
+                font-family: Arial, Helvetica, sans-serif;
+                display:flex;
+                align-items:center;
+                color:white;
+                font-weight: bold;
+                font-size: 20px;
+                margin-left: auto;
+            }
+            
+            #welcome{
+            margin-top: 30px;
+            height: 150px;
+            border-radius: 25px;
+            color:white;
+            padding: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size:22px;
+            font-weight:600;
+            background: linear-gradient(
+            90deg,#753eeb 0%,  #8b4fe9 40%,
+            #c15be6 75%,
+            #e56bbd 100%);
+            display: flex;
+            align-items:space-evenly;
+            justify-content: space-evenly;
+            flex-direction: column;
+            gap: 12px;
+            }
+        #label{
+            font-size: 40px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            align-items:space-evenly;
+            justify-content: space-evenly;
+            flex-direction: column;
+        }
+        #label1{
+            font-family: Arial, Helvetica, sans-serif;
+           
+        }
+        .highlight{
+            color: yellow;
+        }
+
+        #label2{
+            top: 140px;
+            right: 28px;
+            font-size: 48px;
+            position:absolute;
+        }
+
+        .work-container{
+            display: flex;
+            gap: 20px;
+            margin-top: 6px;
+            flex-direction: row;
+            position: relative;
+            flex-direction: row;
+            position: relative;
+        }
+        .work{
+            height: 150px;
+            width: 350px;
+            border-radius: 15px;
+            border: 2px solid rgb(181, 181, 212);
+            margin-top: 40px;
+            background-color: rgb(242, 239, 239);
+            transition:  transform 0.3s ease, box-shadow 0.3s ease;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+        .work:hover{
+            transform: translateY(-10px);   
+         box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .no{
+            font-size: 33px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .tag{
+           font-family: Arial, Helvetica, sans-serif;
+           color: #423264;
+           font-size: 16px;
+        }
+
+        .ag{
+          font-family: Arial, Helvetica, sans-serif;
+           color: #251744;
+           font-size: 30px;
+           font-weight: bold;
+           margin-top: 30px;
+        }
+
+        .a{
+            font-family: Arial, Helvetica, sans-serif;
+           color: #493771;
+           font-size: 15px;
+           display: flex;
+           justify-content: end;
+           margin-top: -25px ;
+        }
+
+        .boxes{
+             display: flex;
+            gap: 20px;
+            margin-top: 6px;
+            flex-direction: row;
+            position: relative;
+            flex-direction: row;
+            position: relative;
+
+        }
+
+        .math{
+            height: 180px;
+            width: 400px;
+            border-radius: 20px;
+            margin-top: 40px;
+            background-color: rgb(242, 239, 239);
+            transition:  transform 0.3s ease, box-shadow 0.3s ease;
+            font-size: 15px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            box-shadow: 0 8px 18px rgba(83, 83, 83, 0.2);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .math:hover{
+            transform: translateY(-10px);   
+        }
+        
+         .story{
+            height: 180px;
+            width: 400px;
+            border-radius: 20px;
+            margin-top: 40px;
+            background-color: rgb(242, 239, 239);
+            transition:  transform 0.3s ease, box-shadow 0.3s ease;
+            font-size: 15px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            box-shadow: 0 8px 18px rgba(83, 83, 83, 0.2);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .story:hover{
+            transform: translateY(-10px);   
+        }
+
+
+       .science{
+            height: 180px;
+            width: 400px;
+            border-radius: 20px;
+            margin-top: 40px;
+            background-color: rgb(242, 239, 239);
+            transition:  transform 0.3s ease, box-shadow 0.3s ease;
+            font-size: 15px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            box-shadow: 0 8px 18px rgba(83, 83, 83, 0.2);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .science:hover{
+            transform: translateY(-10px);   
+        }
+
+        .drawing{
+            height: 180px;
+            width: 400px;
+            border-radius: 20px;
+            margin-top: 40px;
+            background-color: rgb(242, 239, 239);
+            transition:  transform 0.3s ease, box-shadow 0.3s ease;
+            font-size: 15px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            box-shadow: 0 8px 18px rgba(83, 83, 83, 0.2);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .drawing:hover{
+            transform: translateY(-10px);   
+        }
+
+        .hindi{
+            height: 180px;
+            width: 400px;
+            border-radius: 20px;
+            margin-top: 40px;
+            background-color: rgb(242, 239, 239);
+            transition:  transform 0.3s ease, box-shadow 0.3s ease;
+            font-size: 15px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            box-shadow: 0 8px 18px rgba(83, 83, 83, 0.2);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .hindi:hover{
+            transform: translateY(-10px);   
+        }
+
+        .number{
+            height: 180px;
+            width: 400px;
+            border-radius: 20px;
+            margin-top: 40px;
+            background-color: rgb(242, 239, 239);
+            transition:  transform 0.3s ease, box-shadow 0.3s ease;
+            font-size: 15px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            box-shadow: 0 8px 18px rgba(83, 83, 83, 0.2);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .number:hover{
+            transform: translateY(-10px);   
+        }
+   
+
+
+         .rec{
+    height: 140px;
+    border-radius: 20px;
+    background: linear-gradient(
+        90deg,
+        #F5A623 0%,
+        #F2991F 35%,
+        #EC8B1A 70%,
+        #E07A12 100%
+    );
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 0 40px;
+    margin-top: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-direction: column;
+    color: white;
+}
+
+#r1{
+    font-size: 28px;
+}
+
+#r2{
+    font-size: 26px;
+    font-weight: bold;
+}
+
+#r3{
+    font-size: 16px;
+    opacity: 0.95;
+}
+
+.last{
+    height: 150px;
+    background: linear-gradient(
+        90deg,
+        #1ECAD3 0%,
+        #17B6C9 35%,
+        #0F8FB3 70%,
+        #0A6EA1 100%
+    );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 40px;
+    margin-top: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+#b1{
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 30px;
+    display: flex;
+    align-items:space-evenly;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 12px;
+    margin-left: -800px;
+}
+#b4{
+    font-size: 16px;
+    margin-top: -100px;
+    display: flex;
+    align-items:space-evenly;
+    justify-content: space-evenly;
+    flex-direction: row;
+    gap: 12px;
+    margin-left: 900px;
+}
+#b2{
+    font-size: 15px;
+    margin-top: -10px;
+}
+#b3{
+    margin-top:  20px;
+    font-size: 30px;
+}
+
+.icon{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 45px;
+    top:65px;
+    right: 150px;
+}
+.sub{
+    font-weight: bold;
+    font-size: 20px;
+    right: 50px;
+    top:5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.sub1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    right: 70px;
+    top: -10px;
+}
+.time{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: #4d377e;
+    bottom: 60px;
+    left: 135px;
+}
+.task{
+            height: 55px;
+            width: 80px;
+            border-radius: 40px;
+            background-color: rgb(92, 155, 239);
+            color: white;
+            font-size: 13px;
+            font-weight: lighter;
+            position: relative;
+            right: 140px;
+            bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2px 8px;;
+}
+.task1{
+            height: 75px;
+            width: 85px;
+            border-radius: 40px;
+            background-color: rgb(228, 155, 66);
+            color: white;
+            font-size: 12px;
+            font-weight: lighter;
+            position: relative;
+            right: 140px;
+            bottom: 20px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px 11px;
+}
+.task2{
+            height: 75px;
+            width: 85px;
+            border-radius: 40px;
+            background-color: rgb(111, 194, 98);
+            color: white;
+            font-size: 13px;
+            font-weight: lighter;
+            position: relative;
+            right: 140px;
+            bottom: 20px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px 11px;
+}
+
+
+
+/* ===== MOBILE RESPONSIVE (ADDITIONAL ONLY) ===== */
+@media screen and (max-width: 768px) {
+
+    #navbar{
+        flex-direction: column;
+        height: auto;
+        padding: 12px;
+        text-align: center;
+    }
+
+    #book{
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+
+    #book1{
+        margin-left: 0;
+        font-size: 16px;
+    }
+
+    #welcome{
+        height: auto;
+        padding: 20px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    #label{
+        font-size: 28px;
+    }
+
+    #label2{
+        position: static;
+        font-size: 36px;
+    }
+
+    .work-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .work{
+        width: 90%;
+        height: auto;
+    }
+
+    .boxes{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .math,
+    .story,
+    .science,
+    .drawing,
+    .hindi,
+    .number{
+        width: 90%;
+        height: auto;
+        padding: 20px 10px;
+    }
+
+    .S{
+        position: static;
+        padding: 12px 28px;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .icon,
+    .time,
+    .task,
+    .task1,
+    .task2{
+        position: static;
+        margin-top: 8px;
+    }
+
+    .rec{
+        height: auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .last{
+        height: auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    #b1,
+    #b4{
+        margin: 0;
+        font-size: 16px;
+        text-align: center;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div id="book">📖 📚 KidLearn</div>
+        <div id="book1"> 🏠 Home 📝 Assignments👤 Profile</div>
+    </div>
+
+    <div id="welcome"> ✨ Welcome back!
+        <div id="label">Hey Champ! Ready to Learn? ⭐</div>
+        <div id="label1">You have <span class="highlight">3 new assignments</span> waiting for you. Let’s make today awesome!</div>
+        <div id="label2">📚</div>
+    </div>
+
+    <div class="work-container">
+        <div class="work">📋
+            <div class="no">6</div>
+            <div class="tag">Total</div>
+        </div>
+        <div class="work">✅
+            <div class="no">1</div>
+            <div class="tag">Completed</div>
+        </div>
+        <div class="work">🚀
+            <div class="no">2</div>
+            <div class="tag">In Progress</div>
+        </div>
+        <div class="work">⭐
+            <div class="no">150</div>
+            <div class="tag">Points</div>
+        </div>
+    </div>
+
+    <div class="ag"><i class="fa-solid fa-trophy"></i> My Assignments
+        <div class="a"><i class="fa-solid fa-arrow-trend-up"></i> &nbsp; Keep Going!</div>
+    </div>
+
+    <div class="boxes">
+
+        <div class="math">
+            <div class="icon">🔢</div>
+            <div class="sub"> Math Practice</div>
+            <div class="sub1"> <i class="fa-solid fa-book"></i>&nbsp; Mathematics</div>
+            <div class="task"> <i class="fa-solid fa-circle-exclamation"></i>&nbsp; New! ✨</div>
+            <div class="time"> <i class="fa-regular fa-clock"></i> Tomorrow</div>
+            <a href="home.html" class="S">Start Now! 🚀</a>
+        </div>
+
+        <div class="story">
+           <div class="icon">📝</div>
+           <div class="sub">Story Writing</div>
+           <div class="sub1"> <i class="fa-solid fa-book"></i>&nbsp; English</div>
+           <div class="task1"> <i class="fa-regular fa-clock"></i>&nbsp; Working 🚀</div>
+           <div class="time"> <i class="fa-regular fa-clock"></i> In 3 days</div>
+           <a href="home2.html" class="S">Start Now! 🚀</a>
+        </div>
+
+        <div class="science">
+            <div class="icon">🔬</div>
+            <div class="sub">Science Project</div>
+            <div class="sub1"> <i class="fa-solid fa-book"></i>&nbsp; Science</div>
+            <div class="task"> <i class="fa-solid fa-circle-exclamation"></i> &nbsp; New! ✨</div>
+            <div class="time"> <i class="fa-regular fa-clock"></i>  Next Week</div>
+            <a href="home3.html" class="S">Start Now! 🚀</a>
+        </div>
+    </div> 
+
+     <div class="boxes">
+        <div class="drawing">
+            <div class="icon">🎨</div>
+            <div class="sub">Drawing Activity</div>
+            <div class="sub1"> <i class="fa-solid fa-book"></i>&nbsp; Art</div>
+            <div class="task2"> <i class="fa-solid fa-circle-check"></i>&nbsp; Done! 🎉</div>
+            <div class="time"> <i class="fa-regular fa-clock"></i> Completed</div>
+            <a href="home.html" class="S">Start Now! 🚀</a>
+        </div>
+
+        <div class="hindi">
+            <div class="icon">📚</div>
+            <div class="sub">Hindi Poem</div>
+            <div class="sub1"> <i class="fa-solid fa-book"></i>&nbsp; Hindi</div>
+            <div class="task1"> <i class="fa-regular fa-clock"></i> &nbsp; Working 🚀</div>
+            <div class="time"> <i class="fa-regular fa-clock"></i> In 2 days</div>
+            <a href="home.html" class="S">Start Now! 🚀</a>
+        </div>
+
+        <div class="number">
+            <div class="icon">🎯</div>
+            <div class="sub">Number Games</div>
+            <div class="sub1"> <i class="fa-solid fa-book"></i>&nbsp; Mathematics</div>
+            <div class="task"> <i class="fa-solid fa-circle-exclamation"></i>&nbsp; New! ✨</div>
+            <div class="time"> <i class="fa-regular fa-clock"></i> Today</div>
+            <a href=home.html class="S">Start Now! 🚀</a>
+        </div>
+    </div> 
+
+
+    <div class="rec">
+    <div id="r1">⭐⭐⭐</div>
+    <div id="r2">You're doing amazing! 🎉</div>
+    <div id="r3">Complete 2 more assignments to unlock a special badge!</div>
+</div>
+
+<div class="last">
+    <div id="b1">✨ Keep Learning, Keep Growing! ⭐</div>
+    <div id="b2">🏠 Home  📖 Help  ⭐ Rewards</div>
+    <div id="b3">🌟 🎨 📚 🎯 🏆</div>
+    <div id="b4">Made with <i class="fa-solid fa-heart"></i> for Kids © 2024</div>
+</div>
+</body>
+</html>

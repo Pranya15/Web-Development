@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Story Writing | KidLearn</title>
+    <style>
+         .last{
+    height: 150px;
+    background: linear-gradient(
+        90deg,
+        #1ECAD3 0%,
+        #17B6C9 35%,
+        #0F8FB3 70%,
+        #0A6EA1 100%
+    );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 40px;
+    margin-top: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;}
+    #b1{
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 30px;
+    display: flex;
+    align-items:space-evenly;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 12px;
+    margin-left: -800px;
+}
+#b4{
+    font-size: 16px;
+    margin-top: -100px;
+    display: flex;
+    align-items:space-evenly;
+    justify-content: space-evenly;
+    flex-direction: row;
+    gap: 12px;
+    margin-left: 900px;
+}
+#b2{
+    font-size: 15px;
+    margin-top: -10px;
+}
+#b3{
+    margin-top:  20px;
+    font-size: 30px;
+}
+
+
+/* ===== MOBILE RESPONSIVE (ADDITIONAL ONLY) ===== */
+@media screen and (max-width: 768px) {
+
+    /* Header */
+    body > div:first-child{
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+        padding: 15px;
+        text-align: center;
+    }
+
+    body > div:first-child a{
+        font-size: 24px !important;
+    }
+
+    body > div:first-child div{
+        gap: 15px;
+        font-size: 16px;
+    }
+
+    /* Main layout */
+    body > div:nth-of-type(2) > div{
+        flex-direction: column;
+    }
+
+    /* Left & right sections */
+    body > div:nth-of-type(2) > div > div{
+        flex: 1;
+    }
+
+    /* Assignment card */
+    body > div:nth-of-type(2) > div > div:first-child > div{
+        height: auto !important;
+    }
+
+    /* Sidebar cards */
+    body > div:nth-of-type(2) > div > div:last-child{
+        flex-direction: column;
+    }
+
+    /* Footer */
+    .last{
+        height: auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    #b1,
+    #b4{
+        margin: 0;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    #b2{
+        margin-top: 10px;
+    }
+
+    #b3{
+        font-size: 26px;
+    }
+}
+
+    </style>
+</head>
+
+<body style="margin:0; font-family:'Segoe UI', Arial, sans-serif; background:#f2f2f2;">
+
+<!-- HEADER -->
+<div style="
+    height:90px;
+    background: linear-gradient(
+    90deg,
+    #753eeb 0%,
+    #8b4fe9 40%,
+    #c15be6 75%,
+    #e56bbd 100%
+  );
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 25px;
+">
+
+    <!-- KidLearn Logo -->
+    <a href="https://kidlearn.com" target="_blank"
+       style="text-decoration:none; color:white; font-size:32px; font-weight:bold;">
+       📖 📚 KidLearn
+    </a>
+
+    <!-- Menu -->
+    <div style="display:flex; gap:25px; font-size:20px; font-weight: bold;">
+        <a href="home2.html" style="color:white; text-decoration:none;">🏠 Home</a>
+        <a href="home2.html" style="color:white; text-decoration:none;">📝 Assignments</a>
+        <a href="#" style="color:white; text-decoration:none;"> 👤 Profile</a>
+    </div>
+</div>
+
+<!-- MAIN CONTAINER -->
+<div style="padding:25px;">
+
+    <!-- BACK TO ASSIGNMENTS -->
+    <a href="kidslearn.html"
+       style="display:inline-block; margin-bottom:15px; text-decoration:none; color:#666; font-size:14px;">
+        ← Back to Assignments
+    </a>
+
+    <div style="display:flex; gap:25px;">
+
+        <!-- LEFT CONTENT -->
+        <div style="flex:2;">
+            <div style="
+                background:white;
+                border-radius:14px;
+                padding:25px;
+                box-shadow:0 6px 14px rgba(0,0,0,0.08);
+                height: 400px;
+            ">
+
+                <!-- TITLE -->
+                <div style="display:flex; align-items:center; gap:12px;">
+                    <div style="
+                        width:36px;
+                        height:96px;
+                        border-radius:8px;
+                        display:flex;
+                        align-items:center;
+                        justify-content:center;
+                        color:white;
+                        font-weight:bold;
+                        font-size: 50px;
+                    ">🔬</div>
+
+                    <h2 style="margin:0; font-size:22px;">Science Project</h2>
+                </div>
+
+                <!-- DESCRIPTION -->
+                <p style="margin-top:15px; color:#666; line-height:1.6;">
+                    Explore the world of plants! Learn about how plants grow and create your own plant journal.
+                </p>
+
+                <!-- INSTRUCTIONS -->
+                <h3 style="margin-top:25px;">Instructions</h3>
+
+                <!-- Instruction 1 -->
+                <div style="display:flex; align-items:center; margin-top:15px;">
+                    <div style="
+                        width:30px;
+                        height:30px;
+                        border-radius:50%;
+                        background:#8f5cf7;
+                        color:white;
+                        text-align:center;
+                        line-height:30px;
+                        font-weight:600;
+                        margin-right:12px;
+                    ">1</div>
+                    <div>Plant a seed and observe daily</div>
+                </div>
+
+                <!-- Instruction 2 -->
+                <div style="display:flex; align-items:center; margin-top:12px;">
+                    <div style="
+                        width:30px;
+                        height:30px;
+                        border-radius:50%;
+                        background:#8f5cf7;
+                        color:white;
+                        text-align:center;
+                        line-height:30px;
+                        font-weight:600;
+                        margin-right:12px;
+                    ">2</div>
+                    <div>Plant a seed and observe daily</div>
+                </div>
+
+                <!-- Instruction 3 -->
+                <div style="display:flex; align-items:center; margin-top:12px;">
+                    <div style="
+                        width:30px;
+                        height:30px;
+                        border-radius:50%;
+                        background:#8f5cf7;
+                        color:white;
+                        text-align:center;
+                        line-height:30px;
+                        font-weight:600;
+                        margin-right:12px;
+                    ">3</div>
+                    <div>Draw and label plant parts</div>
+                </div>
+
+                <!-- Instruction 4 -->
+                <div style="display:flex; align-items:center; margin-top:12px;">
+                    <div style="
+                        width:30px;
+                        height:30px;
+                        border-radius:50%;
+                        background:#8f5cf7;
+                        color:white;
+                        text-align:center;
+                        line-height:30px;
+                        font-weight:600;
+                        margin-right:12px;
+                    ">4</div>
+                    <div>Write what you learned</div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- RIGHT SIDEBAR -->
+        <div style="flex:1; display:flex; flex-direction:column; gap:20px;">
+
+            <!-- START ASSIGNMENT -->
+            <div style="
+                background:white;
+                border-radius:14px;
+                padding:22px;
+                box-shadow:0 6px 14px rgba(0,0,0,0.08);
+                text-align:center;
+            ">
+                <div style="
+                    background:#ff9f1a;
+                    color:white;
+                    padding:14px;
+                    border-radius:30px;
+                    font-weight:600;
+                    cursor:pointer;
+                ">
+                    Start Assignment
+                </div>
+
+                <div style="margin-top:10px; color:#777; font-size:14px;">
+                    ⟳ Mark as Complete
+                </div>
+            </div>
+
+            <!-- POINTS CARD -->
+            <div style="
+                background:white;
+                border-radius:14px;
+                padding:25px;
+                box-shadow:0 6px 14px rgba(0,0,0,0.08);
+                text-align:center;
+            ">
+                <div style="font-size:42px;">⭐</div>
+                <div style="font-size:28px; font-weight:600;">85</div>
+                <div style="color:#666;">Points to earn</div>
+            </div>
+
+            <!-- TIME LEFT -->
+            <div style="
+                background:#ff9f1a;
+                border-radius:14px;
+                padding:25px;
+                color:white;
+                text-align:center;
+            ">
+                <div style="font-size:16px; font-weight:600;">⏱ Time Left</div>
+                <div style="margin-top:8px; font-size:22px;">In 2 days</div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="last">
+    <div id="b1">✨ Keep Learning, Keep Growing! ⭐</div>
+    <div id="b2">🏠 Home  📖 Help  ⭐ Rewards</div>
+    <div id="b3">🌟 🎨 📚 🎯 🏆</div>
+    <div id="b4">Made with <i class="fa-solid fa-heart"></i> for Kids © 2024</div>
+</div>
+
+</body>
+</html>

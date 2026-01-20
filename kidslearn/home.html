@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GO BACK HOME</title>
+    <style>
+        body{
+            background-color:white(242, 231, 215);
+        }
+        
+.b {
+  height: 50px;
+
+        width: 180px;
+
+  background: linear-gradient(
+    90deg,
+    #753eeb 0%,
+    #8b4fe9 40%,
+    #c15be6 75%,
+    #e56bbd 100%
+  );
+
+  display: flex;              
+  align-items: center;       
+  justify-content: center;    
+
+  font-size: 15px;
+  font-weight: lighter;
+  color: white;
+  border-radius: 50px;
+  margin-top: 20px;
+
+  padding: 0;        
+  pointer-events: auto;     
+  cursor: pointer;  
+  z-index: 10000;; 
+}
+        #navbar{
+            height: 90px;
+            border-radius: 8px;
+            background: linear-gradient(
+            90deg,#753eeb 0%,  #8b4fe9 40%,
+            #c15be6 75%,
+            #e56bbd 100%);
+            display:flex;
+            align-items:center;
+            padding:0 24px;
+            color:white;
+            font-weight:600;
+            font-size:20px;
+            position: relative;
+            z-index: 1;
+            
+        }
+        
+            #book{
+             height: 50px;
+             display:flex;
+             align-items:center;
+            font-family: Arial, Helvetica, sans-serif;
+            color:white;
+            font-weight:bolder;
+            font-size:30px;
+            transition:  transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            #book:hover{
+            transform: translateY(-10px);   
+        }
+        
+            #book1{
+                font-family: Arial, Helvetica, sans-serif;
+                display:flex;
+                align-items:center;
+                color:white;
+                font-weight: bold;
+                font-size: 20px;
+                margin-left: auto;
+            }
+
+            .last{
+    height: 150px;
+    background: linear-gradient(
+        90deg,
+        #1ECAD3 0%,
+        #17B6C9 35%,
+        #0F8FB3 70%,
+        #0A6EA1 100%
+    );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 40px;
+    margin-top: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    
+}
+#b1{
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 30px;
+    display: flex;
+    align-items:space-evenly;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 12px;
+    margin-left: -800px;
+}
+#b4{
+    font-size: 16px;
+    margin-top: -100px;
+    display: flex;
+    align-items:space-evenly;
+    justify-content: space-evenly;
+    flex-direction: row;
+    gap: 12px;
+    margin-left: 900px;
+}
+#b2{
+    font-size: 15px;
+    margin-top: -10px;
+}
+
+#b3{
+    margin-top:  20px;
+    font-size: 30px;
+}
+.not{
+    height: 300px;
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    font-weight: bolder;
+    font-size: 30px;
+    margin-top: 10px;
+
+}
+      
+ /* ===== MOBILE RESPONSIVE (ADDITIONAL ONLY) ===== */
+@media screen and (max-width: 768px) {
+
+    #navbar{
+        flex-direction: column;
+        height: auto;
+        padding: 12px;
+        text-align: center;
+    }
+
+    #book{
+        font-size: 24px;
+        margin-bottom: 6px;
+    }
+
+    #book1{
+        margin-left: 0;
+        font-size: 16px;
+    }
+
+    .not{
+        height: auto;
+        font-size: 22px;
+        text-align: center;
+        padding: 30px 15px;
+    }
+
+    .b{
+        width: 160px;
+        height: 45px;
+        font-size: 14px;
+        margin-top: 20px;
+    }
+
+    .last{
+        height: auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    #b1,
+    #b4{
+        margin: 0;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    #b2{
+        margin-top: 10px;
+    }
+
+    #b3{
+        font-size: 26px;
+    }
+}
+
+
+ </style>
+</head>
+<body>
+    <div id="navbar">
+        <div id="book">📖 📚 KidLearn</div>
+        <div id="book1"> 🏠 Home 📝 Assignments👤 Profile</div>
+    </div>
+
+    <div class="not">Assignment not found 😅
+        <a href="kidslearn.html" class="b">Go Back Home</a>
+    </div>
+<div class="last">
+    <div id="b1">✨ Keep Learning, Keep Growing! ⭐</div>
+    <div id="b2">🏠 Home  📖 Help  ⭐ Rewards</div>
+    <div id="b3">🌟 🎨 📚 🎯 🏆</div>
+    <div id="b4">Made with <i class="fa-solid fa-heart"></i> for Kids © 2024</div>
+</div>
+</body>
+</html>
