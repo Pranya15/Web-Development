@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="https://cdn.tailwindcss.com"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+<style>
+  @keyframes spinSlow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  html{
+    scroll-behavior: smooth;
+  }
+
+  
+  .nav-link {
+    position: relative;
+    padding-bottom: 6px;
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #fb923c; /* orange-400 */
+    transition: width 0.3s ease;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  .nav-link:focus::after {
+    width: 100%;
+  }
+
+</style>
+</head>
+<body>
+  <section id="home">
+    <body class="bg-gray-50 text-gray-800 font-sans">
+<nav class="w-full fixed top-0 left-0 z-50 bg-gray-50 border-b border-gray-200 ">
+  <div class="max-w-6xl px-2 py-4 flex items-center justify-between">
+
+    <div class="text-3xl font-bold ">  
+      Port<span class="text-orange-400">folio</span>
+    </div>
+
+
+    <ul class="flex gap-8 text-base text-gray-600">
+      <li>
+      <a href="#home" class="nav-link ">Home </a></li>
+      <li>
+      <a href="#about" class="nav-link">About</a></li>
+      <li>
+      <a href="#work" class="nav-link ">Work </a></li>
+      <li>
+      <a href="#skills" class="nav-link">Skills</a></li>
+      <li>
+      <a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+
+    
+    <div class="flex items-center gap-4 -mr-24">
+      
+      <button class="w-10 h-10 flex items-center justify-center rounded-xl bg-orange-400 text-white ">
+        <i class="fa-regular fa-moon"></i>
+      </button>
+
+      
+     <button class="px-2 py-2 border border-gray-300 rounded-xl text-sm font-medium bg-black text-white ">
+        Let’s Talk
+      </button>
+      
+    </div>
+
+  </div>
+
+
+</nav>
+<div class="h-24"></div>
+
+
+<div class="text-xl font-semibold px-4 ">  
+      <span class="text-orange-400">Welcome to my portfolio</span>
+    </div>
+
+
+<section class="max-w-6xl  px-4 py-5">
+  
+
+  <h1 class="text-5xl md:text-6xl font-bold leading-tight text-gray-900">
+    Hi, I’m
+    <span class="bg-gradient-to-r from-orange-400 to-emerald-500 bg-clip-text text-transparent italic">
+      Pranya
+    </span>
+    <br />
+    <span class="text-7xl text-gray-500">Designer & <br/> Developer</span>
+  </h1>
+
+  <p class="mt-6 max-w-xl text-gray-500  leading-relaxed text-xl">
+    I create beautiful digital experiences that combine stunning <br/> design with
+    clean, efficient code. Let’s build something <br/> amazing together.
+  </p>
+</section>
+
+
+<div class="mt-5 mx-4 flex items-center gap-4">
+
+  
+  <button
+    class="px-6 py-3 bg-black text-white rounded-xl font-medium
+           transition-transform duration-300 ease-out
+           hover:scale-105 active:scale-100">
+    View My Work ↓
+  </button>
+
+  
+  <button
+    class="px-6 py-3 border border-gray-300 rounded-xl font-medium text-gray-800
+           transition-all duration-300
+           hover:bg-gray-100 active:border-black">
+    Download Resume
+  </button>
+
+  </div>
+<div class="flex items-center gap-4 mt-6 mx-4">
+
+  
+  <button
+    class="w-12 h-12 flex items-center justify-center rounded-full
+           border border-gray-300 text-gray-700
+           transition-all duration-300
+           hover:border-orange-400 hover:text-orange-400
+           focus:border-orange-400 focus:text-orange-400 focus:outline-none">
+    <i class="fa-brands fa-github text-lg"></i>
+  </button>
+
+  
+  <button
+    class="w-12 h-12 flex items-center justify-center rounded-full
+           border border-gray-300 text-gray-700
+           transition-all duration-300
+           hover:border-orange-400 hover:text-orange-400
+           focus:border-orange-400 focus:text-orange-400 focus:outline-none">
+    <i class="fa-brands fa-linkedin-in text-lg"></i>
+  </button>
+
+
+  <button
+    class="w-12 h-12 flex items-center justify-center rounded-full
+           border border-gray-300 text-gray-700
+           transition-all duration-300
+           hover:border-orange-400 hover:text-orange-400
+           focus:border-orange-400 focus:text-orange-400 focus:outline-none">
+    <i class="fa-brands fa-twitter text-lg"></i>
+  </button>
+
+<div class="absolute right-8 top-28 w-[440px] h-[440px]">
+
+  <div
+    class="absolute inset-0 rounded-full border-2 border-dashed border-orange-300"
+    style="animation: spinSlow 18s linear infinite;"></div>
+
+  <div class="absolute inset-6 rounded-full overflow-hidden bg-white shadow-2xl">
+    
+    <img src="water.avif"
+      class="w-full h-full object-cover rounded-full"
+    />
+  </div>
+
+  <div class="absolute left-0 bottom-16 bg-white shadow-lg rounded-xl px-6 py-4">
+    <p class="text-emerald-500 font-bold text-2xl leading-none">20+</p>
+    <p class="text-xs text-gray-500">Projects</p>
+  </div>
+
+  <div class="absolute right-0 top-16 bg-white shadow-lg rounded-xl px-6 py-4">
+    <p class="text-orange-400 font-bold text-2xl leading-none">1+</p>
+    <p class="text-xs text-gray-500">Years Exp.</p>
+  </div>
+</div>
+<section id="about">
+</div>
+</div>
+</section>
+
+
+
+
+
+
+
+<div class="text-l font-semibold mt-10 w-full flex justify-center">  
+      <span class="text-orange-400 text-sm">ABOUT ME</span>
+    </div>
+
+    <div class="mt-5 font-bold">
+  
+  <h2 class="text-5xl font-extrabold text-black leading-tight  mt-5 w-full flex justify-center">
+    Passionate about creating digital
+  </h2>
+
+  <span class="block mt-2 text-5xl font-serif italic text-black  mt-2 w-full flex justify-center">
+    magic
+  </span>
+</div>
+
+<div class="mt-10 ml-36">
+  <p class="text-gray-500 text-xl ">I'm a creative designer and developer with over 5 </br>years of experience building digital products. I </br> believe great design is about solving problems</br> while creating delightful experiences.</p></br>
+  <p class="text-gray-500 text-xl">When I'm not coding or designing, you'll find me</br>exploring new technologies, reading design</br>blogs, or enjoying a good cup of coffee. I'm</br>
+  always excited to take on new challenges and</br>collaborate on interesting projects.</p>
+</div>
+
+
+
+<div class="w-full flex justify-end relative -ml-36">
+  <div class="grid grid-cols-2 gap-10 -mt-72">
+
+    <div
+      class="w-56 h-32 rounded-2xl border border-gray-200 bg-white
+             flex flex-col justify-center items-center
+             transition-transform duration-200 ease-out
+             hover:-translate-y-2 ">
+      <span class="text-4xl font-bold text-orange-400">50+</span>
+      <span class="text-sm text-gray-500 mt-1">Projects Completed</span>
+    </div>
+
+    <div
+      class="w-56 h-32 rounded-2xl border border-gray-200 bg-white
+             flex flex-col justify-center items-center
+             transition-transform duration-200 ease-out
+             hover:-translate-y-2 ">
+      <span class="text-4xl font-bold text-teal-500">30+</span>
+      <span class="text-sm text-gray-500 mt-1">Happy Clients</span>
+    </div>
+<div
+      class="w-56 h-32 rounded-2xl border border-gray-200 bg-white
+             flex flex-col justify-center items-center
+             transition-transform duration-200 ease-out
+             hover:-translate-y-2 ">
+      <span class="text-4xl font-bold text-gray-800">5+</span>
+      <span class="text-sm text-gray-500 mt-1">Years Experience</span>
+    </div>
+
+    <div
+      class="w-56 h-32 rounded-2xl border border-gray-200 bg-white
+             flex flex-col justify-center items-center
+             transition-transform duration-200 ease-out
+             hover:-translate-y-2 ">
+      <span class="text-4xl font-bold text-gray-800">15+</span>
+      <span class="text-sm text-gray-500 mt-1">Awards Won</span>
+    </div>
+  </div>
+</div>
+
+
+<div class="w-full flex justify-center mt-16">
+  
+  <div class="flex gap-8">
+
+   
+    <div
+      class="group w-56 h-40 rounded-2xl border border-gray-200
+             flex flex-col justify-center items-center gap-3
+             transition-all duration-300 ease-out
+             hover:-translate-y-2 hover:border-orange-400"
+    >
+      <div
+        class="w-12 h-12 rounded-full
+               bg-orange-100 text-orange-500
+               flex items-center justify-center
+               transition-all duration-300
+               group-hover:bg-orange-400 group-hover:text-white"
+      >
+        <i class="fa-solid fa-palette text-lg"></i>
+      </div>
+
+      <h3 class="font-semibold text-gray-800">UI/UX Design</h3>
+
+      <p class="text-sm text-gray-500 text-center px-3">
+        Creating beautiful, intuitive interfaces users love
+      </p>
+    </div>
+
+    
+    <div
+      class="group w-56 h-40 rounded-2xl border border-gray-200
+             flex flex-col justify-center items-center gap-3
+             transition-all duration-300 ease-out
+             hover:-translate-y-2 hover:border-orange-400"
+    >
+      <div
+        class="w-12 h-12 rounded-full
+               bg-orange-100 text-orange-500
+               flex items-center justify-center
+               transition-all duration-300
+               group-hover:bg-orange-400 group-hover:text-white"
+      >
+        <i class="fa-solid fa-code text-lg"></i>
+      </div>
+
+      <h3 class="font-semibold text-gray-800">Development</h3>
+
+      <p class="text-sm text-gray-500 text-center px-3">
+        Building robust applications with modern technologies
+      </p>
+    </div>
+
+    
+    <div
+      class="group w-56 h-40 rounded-2xl border border-gray-200
+             flex flex-col justify-center items-center gap-3
+             transition-all duration-300 ease-out
+             hover:-translate-y-2 hover:border-orange-400"
+    >
+      <div
+        class="w-12 h-12 rounded-full
+               bg-orange-100 text-orange-500
+               flex items-center justify-center
+               transition-all duration-300
+               group-hover:bg-orange-400 group-hover:text-white"
+      >
+        <i class="fa-solid fa-lightbulb text-lg"></i>
+      </div>
+
+      <h3 class="font-semibold text-gray-800">Problem Solving</h3>
+
+      <p class="text-sm text-gray-500 text-center px-3">
+        Finding creative solutions to complex challenges
+      </p>
+    </div>
+
+
+    <div 
+      class="group w-56 h-40 rounded-2xl border border-gray-200
+             flex flex-col justify-center items-center gap-3
+             transition-all duration-300 ease-out
+             hover:-translate-y-2 hover:border-orange-400"
+    >
+      <div
+        class="w-12 h-12 rounded-full
+               bg-orange-100 text-orange-500
+               flex items-center justify-center
+               transition-all duration-300
+               group-hover:bg-orange-400 group-hover:text-white"
+      >
+        <i class="fa-solid fa-rocket text-lg"></i>
+      </div>
+
+      <h3 class="font-semibold text-gray-800">Fast Delivery</h3>
+
+      <p class="text-sm text-gray-500 text-center px-3">
+        Delivering quality work on time, every time
+      </p>
+    </div>
+
+  </div>
+  
+</div>
+<section id="work">
+</section>
+
+
+<section class="w-full flex justify-center mt-32">
+  <div class="max-w-3xl text-center">
+    
+  
+    <p class="text-sm uppercase tracking-widest text-orange-400 mb-4">
+      My Work
+    </p>
+
+    <h2 class="text-6xl font-semibold text-black mb-6">
+      Featured <span class="italic font-serif">Projects</span>
+    </h2>
+
+  
+    <p class="text-gray-500 text-lg leading-relaxed">
+      A selection of my recent work across web design, mobile apps, and branding.
+    </p>
+
+  </div>
+</section>
+
+
+<section class="w-full flex justify-center mt-32">
+  <div class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+
+    
+    <div class="relative flex justify-center">
+
+      
+      <img src="laptop.jpg"class="absolute bottom-[-150px] left-[-20px] w-[860px] " />
+    </div>
+
+    
+    <div>
+  
+      <p class="text-sm uppercase tracking-widest text-orange-400 mb-3">
+        Web Design & Development
+      </p>
+
+      
+      <h2 class="text-4xl font-semibold text-gray-800 mb-4">
+        Analytics Dashboard
+      </h2>
+
+      
+      <p class="text-gray-500 text-lg leading-relaxed mb-6">
+        A comprehensive analytics platform with real-time data visualization
+        and reporting features.
+      </p>
+
+      
+      <div class="flex gap-4 mb-8">
+        <span class="px-4 py-2 border border-gray-300 rounded-full text-sm text-black bg-orange-100">
+          React
+        </span>
+        <span class="px-4 py-2 border border-gray-300 rounded-full text-sm text-black bg-orange-100">
+          TypeScript
+        </span>
+        <span class="px-4 py-2 border border-gray-300 rounded-full text-sm text-black bg-orange-100">
+          Tailwind
+        </span>
+      </div>
+      <a
+        href="#"
+        class="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 rounded-xl text-gray-800 transition-all duration-200 hover:border-black"
+      >
+        View Project →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="bg-white py-32">
+  <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+
+  
+    <div>
+      <p class="text-sm uppercase tracking-widest text-orange-400 mb-3">
+        Mobile App Design
+      </p>
+
+      <h2 class="text-5xl font-bold text-gray-900 mb-6">
+        Fitness Mobile App
+      </h2>
+
+      <p class="text-gray-600 text-lg mb-8 max-w-md">
+        A beautiful fitness tracking app with workout plans, progress tracking,
+        and social features.
+      </p>
+
+      
+      <div class="flex gap-3 mb-8 flex-wrap">
+        <span class="px-4 py-2 text-sm border border-gray-300 rounded-full text-black bg-orange-100">
+          React Native
+        </span>
+        <span class="px-4 py-2 text-sm border border-gray-300 rounded-full text-black bg-orange-100">
+          UI/UX
+        </span>
+        <span class="px-4 py-2 text-sm border border-gray-300 rounded-full text-black bg-orange-100">
+          Figma
+        </span>
+      </div>
+
+    
+      <a
+        href="#"
+        class="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 rounded-xl text-gray-900 font-medium transition hover:border-black"
+      >
+        View Project →
+      </a>
+    </div>
+
+  
+    <div class="flex justify-end">
+
+      <img
+        src="phone.jpg"
+        alt="Fitness App Preview"
+        class="max-w-full h-auto"
+      />
+
+    </div>
+
+  </div>
+</section>
+
+<section class="bg-white py-32">
+  <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+
+    
+    <div class="flex justify-start">
+    
+      <img
+        src="lady.jpg"
+        alt="Project Preview"
+        class="max-w-full h-auto"
+      />
+    </div>
+
+    
+    <div>
+      <p class="text-sm uppercase tracking-widest text-orange-400 mb-3">
+        E-commerce Website
+      </p>
+
+      <h2 class="text-5xl font-bold text-gray-900 mb-6">
+        Fashion E-commerce
+      </h2>
+
+      <p class="text-gray-600 text-lg mb-8 max-w-md">
+        A modern online fashion store with seamless shopping experience
+        and elegant design.
+      </p>
+
+      
+      <div class="flex gap-3 mb-8 flex-wrap">
+        <span class="px-4 py-2 text-sm border border-gray-300 rounded-full text-black bg-orange-100">
+          Next.js
+        </span>
+        <span class="px-4 py-2 text-sm border border-gray-300 rounded-full text-black bg-orange-100">
+          Shopify
+        </span>
+        <span class="px-4 py-2 text-sm border border-gray-300 rounded-full text-black bg-orange-100">
+          Design
+        </span>
+      </div>
+
+      
+      <a
+        href="#"
+        class="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 rounded-xl text-gray-900 font-medium transition hover:border-black"
+      >
+        View Project →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="w-full flex justify-center mt-8">
+  <a
+    href="#"
+    class="px-7 py-3 border border-gray-300 rounded-xl text-gray-900 font-medium transition hover:border-black"
+  >
+    View All Projects
+  </a>
+</div>
+
+</section>
+<section id="skills">
+
+
+
+
+<div class="h-40"></div>
+
+
+
+<section class="bg-white">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+
+    <p class="text-sm uppercase tracking-widest text-orange-400 mb-4">
+      MY SKILLS
+    </p>
+
+    <h2 class="text-5xl font-bold text-black mb-6">
+      Tools & <span class="italic font-serif">Technologies</span>
+    </h2>
+
+    <p class="text-gray-600 text-lg">
+      I work with a variety of modern tools and technologies to bring ideas to life.
+    </p>
+
+  </div>
+</section>
+
+
+<section class="bg-white mt-24">
+  <div class="max-w-5xl mx-auto px-2">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-24">
+
+      
+      <div class="space-y-6">
+
+        
+        <div>
+          <p class="text-l text-black mb-3">React</p>
+          <div class="w-full h-2 bg-gray-200 rounded">
+            <div class="h-2 bg-orange-600 w-[95%] rounded"></div>
+          </div>
+          <p class="text-xs text-gray-500 mt-2">95%</p>
+        </div>
+
+       
+        <div>
+          <p class="text-l text-black mb-3">UI/UX Design</p>
+          <div class="w-full h-2 bg-gray-200 rounded">
+            <div class="h-2 bg-orange-600 w-[92%] rounded"></div>
+          </div>
+          <p class="text-xs text-gray-500 mt-2">92%</p>
+        </div>
+
+        
+        <div>
+          <p class="text-l text-black mb-3">Tailwind CSS</p>
+          <div class="w-full h-2 bg-gray-200 rounded">
+            <div class="h-2 bg-orange-600 w-[95%] rounded"></div>
+          </div>
+          <p class="text-xs text-gray-500 mt-2">95%</p>
+        </div>
+
+      </div>
+
+      
+      <div class="space-y-6">
+
+        
+        <div>
+          <p class="text-l text-black mb-3">TypeScript</p>
+          <div class="w-full h-2 bg-gray-200 rounded">
+            <div class="h-2 bg-orange-600 w-[90%] rounded"></div>
+          </div>
+          <p class="text-xs text-gray-500 mt-2">90%</p>
+        </div>
+
+     
+        <div>
+          <p class="text-l text-black mb-3">Figma</p>
+          <div class="w-full h-2 bg-gray-200 rounded">
+            <div class="h-2 bg-orange-600 w-[88%] rounded"></div>
+          </div>
+          <p class="text-xs text-gray-500 mt-2">88%</p>
+        </div>
+
+       
+        <div>
+          <p class="text-l text-black mb-3">Node.js</p>
+          <div class="w-full h-2 bg-gray-200 rounded">
+            <div class="h-2 bg-orange-600 w-[80%] rounded"></div>
+          </div>
+          <p class="text-xs text-gray-500 mt-2">80%</p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="w-full bg-white py-24">
+  <div class="max-w-6xl mx-auto px-6">
+
+    
+    <h3 class="text-3xl font-semibold text-gray-900 text-center mb-10">
+      Technologies I Work With
+    </h3>
+
+    
+    <div class="flex flex-wrap gap-4 mb-6 mt-4 ml-16">
+      <span class="px-5 py-2 rounded-full border border-gray-300 text-gray-700 text-sm font-medium cursor-pointer transition-all duration-300 hover:border-orange-500 hover:text-orange-500">
+        React
+      </span>
+
+      <span class="px-5 py-2 rounded-full border border-gray-300 text-gray-700 text-sm font-medium cursor-pointer transition-all duration-300 hover:border-orange-500 hover:text-orange-500">
+        Next.js
+      </span>
+
+      <span class="px-5 py-2 rounded-full border border-gray-300 text-gray-700 text-sm font-medium cursor-pointer transition-all duration-300 hover:border-orange-500 hover:text-orange-500">
+        TypeScript
+      </span>
+
+      <span class="px-5 py-2 rounded-full border border-gray-300 text-gray-700 text-sm font-medium cursor-pointer transition-all duration-300 hover:border-orange-500 hover:text-orange-500">
+        JavaScript
+      </span>
+
+      <span class="px-5 py-2 rounded-full border border-gray-300 text-gray-700 text-sm font-medium cursor-pointer transition-all duration-300 hover:border-orange-500 hover:text-orange-500">
+        HTML5
+      </span>
+
+      <span class="px-5 py-2 rounded-full border border-gray-300 text-gray-700 text-sm font-medium cursor-pointer transition-all duration-300 hover:border-orange-500 hover:text-orange-500">
+        CSS3
+      </span>
+
+      <span class="px-5 py-2 rounded-full border border-gray-300 text-gray-700 text-sm font-medium cursor-pointer transition-all duration-300 hover:border-orange-500 hover:text-orange-500">
+        Tailwind CSS
+      </span>
+
+      <span class="px-5 py-2 rounded-full border border-gray-300 text-gray-700 text-sm font-medium cursor-pointer transition-all duration-300 hover:border-orange-500 hover:text-orange-500">
+        Figma
+      </span>
+
+      <span class="px-5 py-2 rounded-full border border-gray-300 text-gray-700 text-sm font-medium cursor-pointer transition-all duration-300 hover:border-orange-500 hover:text-orange-500">
+        Adobe XD
+      </span>
+    </div>
+
+
+    <div class="flex flex-wrap gap-4 ml-36">
+      <span class="px-5 py-2 rounded-full border border-gray-300 text-gray-700 text-sm font-medium cursor-pointer transition-all duration-300 hover:border-orange-500 hover:text-orange-500">
+        Photoshop
+      </span>
+
+      <span class="px-5 py-2 rounded-full border border-gray-300 text-gray-700 text-sm font-medium cursor-pointer transition-all duration-300 hover:border-orange-500 hover:text-orange-500">
+        Illustrator
+      </span>
+
+      <span class="px-5 py-2 rounded-full border border-gray-300 text-gray-700 text-sm font-medium cursor-pointer transition-all duration-300 hover:border-orange-500 hover:text-orange-500">
+        Node.js
+      </span>
+
+      <span class="px-5 py-2 rounded-full border border-gray-300 text-gray-700 text-sm font-medium cursor-pointer transition-all duration-300 hover:border-orange-500 hover:text-orange-500">
+        Git
+      </span>
+
+      <span class="px-5 py-2 rounded-full border border-gray-300 text-gray-700 text-sm font-medium cursor-pointer transition-all duration-300 hover:border-orange-500 hover:text-orange-500">
+        REST API
+      </span>
+
+      <span class="px-5 py-2 rounded-full border border-gray-300 text-gray-700 text-sm font-medium cursor-pointer transition-all duration-300 hover:border-orange-500 hover:text-orange-500">
+        MongoDB
+      </span>
+
+      <span class="px-5 py-2 rounded-full border border-gray-300 text-gray-700 text-sm font-medium cursor-pointer transition-all duration-300 hover:border-orange-500 hover:text-orange-500">
+        PostgreSQL
+      </span>
+    </div>
+
+
+  </div>
+  
+</section>    
+<section id="contact">
+</section>
+
+
+
+<section class="bg-white">
+  <div class="max-w-4xl mx-auto px-6 text-center mt-32">
+
+    <p class="text-sm uppercase tracking-widest text-orange-600 mb-4">
+      Get In Touch
+    </p>
+
+    <h2 class="text-5xl font-bold text-black mb-6">
+      Let's Work  <span class="italic font-serif">Together</span>
+    </h2>
+
+    <p class="text-gray-600 text-lg">
+      Have a project in mind? I'd love to hear from you. Send me a message and let's</br>create something amazing.
+    </p>
+
+  </div>
+</section>
+</section>
+
+<section class="max-w-6xl mx-auto px-6 py-16">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-14">
+
+
+    <div class="space-y-6">
+
+      
+      <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center">
+          <i class="fa-solid fa-envelope text-orange-500"></i>
+        </div>
+        <div>
+          <p class="font-semibold text-gray-900">Email</p>
+          <p class="text-gray-600">hello@sarahdesign.com</p>
+        </div>
+      </div>
+
+      
+      <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center">
+          <i class="fa-solid fa-phone text-orange-500"></i>
+        </div>
+        <div>
+          <p class="font-semibold text-gray-900">Phone</p>
+          <p class="text-gray-600">+1 (555) 123-4567</p>
+        </div>
+      </div>
+
+      
+      <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center">
+          <i class="fa-solid fa-location-dot text-orange-500"></i>
+        </div>
+        <div>
+          <p class="font-semibold text-gray-900">Location</p>
+          <p class="text-gray-600">San Francisco, CA</p>
+        </div>
+      </div>
+
+      
+      <div class="mt-8 border border-gray-300 rounded-xl p-6 bg-white max-w-md">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-3 h-3 bg-green-500 rounded-full"></span>
+          <p class="font-semibold text-gray-900">Available for Work</p>
+        </div>
+        <p class="text-gray-600">
+          I'm currently taking on new projects. Let's discuss how I can help you.
+        </p>
+      </div>
+
+    </div>
+
+  
+    <div class="border border-gray-300 rounded-2xl p-8 bg-gray-50">
+
+      <form class="space-y-6">
+
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-sm font-medium text-gray-900 mb-1">
+              Your Name
+            </label>
+            <input
+              type="text"
+              class="w-full rounded-xl border border-gray-300 px-4 py-3 text-black focus:border-gray-800 focus:ring-0"
+            />
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-900 mb-1">
+              Your Email
+            </label>
+            <input
+              type="email"
+              class="w-full rounded-xl border border-gray-300 px-4 py-3 text-black focus:border-gray-800 focus:ring-0"
+            />
+          </div>
+        </div>
+
+      
+        <div>
+          <label class="block text-sm font-medium text-gray-900 mb-1">
+            Subject
+          </label>
+          <input
+            type="text"
+            class="w-full rounded-xl border border-gray-300 px-4 py-3 text-black focus:border-gray-800 focus:ring-0"
+          />
+        </div>
+
+        
+        <div>
+          <label class="block text-sm font-medium text-gray-900 mb-1">
+            Message
+          </label>
+          <textarea
+            rows="6"
+            class="w-full rounded-xl border border-gray-300 px-4 py-3 text-black focus:border-gray-800 focus:ring-0"
+            placeholder="Tell me about your project..."
+          ></textarea>
+        </div>
+
+        
+        <button
+          type="submit"
+          class="w-full bg-black text-white py-4 rounded-xl font-medium flex items-center justify-center gap-2 transition-all duration-300 hover:-translate-y-1"
+        >
+          Send Message
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<footer class="mt-24 border-t border-gray-200 py-10">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+
+
+    <div class="text-xl font-bold -pl-4 -ml-8">  
+      Port<span class="text-orange-400">folio</span>
+    </div>
+    
+    <div class="flex items-center gap-6 text-gray-700">
+      <a href="#" class="hover:text-orange-500 transition">
+        <i class="fa-brands fa-github text-xl"></i>
+      </a>
+      <a href="#" class="hover:text-orange-500 transition">
+        <i class="fa-brands fa-linkedin-in text-xl"></i>
+      </a>
+      <a href="#" class="hover:text-orange-500 transition">
+        <i class="fa-brands fa-twitter text-xl"></i>
+      </a>
+      <a href="#" class="hover:text-orange-500 transition">
+        <i class="fa-brands fa-instagram text-xl"></i>
+      </a>
+    </div>
+
+    
+    <div class="text-sm text-gray-600 flex items-center gap-1">
+      <span>Made with</span>
+      <span class="text-red-500">❤</span>
+      <span>© 2026</span>
+    </div>
+
+  </div>
+</footer>
+</body>
+</html>
