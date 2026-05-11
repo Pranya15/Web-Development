@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevents scrollbar */
+}
+
+.background {
+  width: 100vw;
+  height: 100vh ;
+  background-color: black;
+  background-size: cover;
+  position: relative;
+}
+
+.shinchan {
+  position: absolute;
+  bottom: 50px;   /* distance from ground */
+  left: -200px;   /* start off screen */
+  height: 220px;
+  animation: walkAcross 12s linear infinite;
+}
+
+/* Keyframes for movement */
+@keyframes walkAcross {
+  from {
+    left: -200px;
+  }
+  to {
+    left: 100vw; /* move across full screen */
+  }
+}

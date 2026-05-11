@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <style>
+        #navbar{
+            height: 40px;
+            background-color: black;
+            padding: 8px 20px;
+            border-radius: 5px;
+            display: flex;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        #navbar:hover{
+            transition: 0.3s;
+        }
+
+        #web{
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        #box1{
+            height: 350px;
+            width: 250px;
+            transition: 2s;
+            border: 1px solid rgb(190, 188, 188);
+            border-radius: 5%;
+            left: 20px;
+            position: relative;
+            box-shadow: rgba(163, 161, 161, 0.25) 0px 30px 30px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            
+        }
+        #box1:hover{
+            transform: scale(1.1);
+        }
+
+        #R{
+            height: 85px;
+            width: 85px;
+            border-radius: 50%;
+            background-color: black;
+            color: white;
+            text-align: center;
+            margin-top: 35px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            justify-content: center;
+            font-weight: bold;
+            font-size: 35px; 
+            font-display: block;
+            display: flex;
+            align-items: center;
+        }
+
+        #box2{
+            height: 350px;
+            transition: 2s;
+            width: 250px;
+            border: 1px solid rgb(190, 188, 188);
+            border-radius: 5%;
+            left: 20px;
+            position: relative;
+            box-shadow: rgba(163, 161, 161, 0.25) 0px 30px 30px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+         #box2:hover{
+            transform: scale(1.1);
+        }
+        #N{
+            height: 85px;
+            width: 85px;
+            border-radius: 50%;
+            background-color: black;
+            color: white;
+            text-align: center;
+            margin-top: 35px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            justify-content: center;
+            font-weight: bold;
+            font-size: 35px; 
+            font-display: block;
+            display: flex;
+            align-items: center; 
+        }
+
+
+        #box3{
+            height: 350px;
+            width: 250px;
+            transition: 2s;
+            border: 1px solid rgb(190, 188, 188);
+            border-radius: 5%;
+            left: 20px;
+            position: relative;
+            box-shadow: rgba(163, 161, 161, 0.25) 0px 30px 30px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+         #box3:hover{
+            transform: scale(1.1);
+        }
+
+        #A{
+            height: 85px;
+            width: 85px;
+            border-radius: 50%;
+            background-color: black;
+            color: white;
+            text-align: center;
+            margin-top: 35px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            justify-content: center;
+            font-weight: bold;
+            font-size: 35px; 
+            font-display: block;
+            display: flex;
+            align-items: center;
+        }
+
+        #last{
+             height: 40px;
+             width: 70px;
+             border-radius: 40px;
+             background-color: red;
+             color: white;
+             text-align: center;
+             position: fixed;
+             bottom: 20px;
+             right: 20px;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             cursor: pointer;
+         }
+
+         .name{
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 130px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+         }
+
+         .vp{
+            height: 40px;
+            width: 100px;
+            color: white;
+            background-color: black;
+            border-radius: 25px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            margin-top: 120px;
+            right: 77%;
+            transform: translateX(77%);
+         }
+
+         .work{
+            color: rgb(110, 108, 108);
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            margin-top: -155px;
+         }
+
+         .quality{
+            margin: 15px auto;
+            padding: 10px;
+            width: 85%;
+            min-height: 60px;
+            border: 1.5px dotted rgb(208, 205, 205);
+            border-radius: 8px;
+            text-align: center;
+            font-size: 14px;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+         }
+
+
+         #offline{
+            height: 25px;
+            width: 70px;
+            border-radius: 40px;
+            background-color: red;
+            color: white;
+            font-size: 12px;
+            font-weight: lighter;
+            position: absolute;
+            top: 12px;          
+            right: 12px;        
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+         }
+
+         
+        .status{
+            height: 25px;
+            width: 70px;
+            border-radius: 40px;
+            background-color:green;
+            color: white;
+            font-size: 12px;
+            font-weight: lighter;
+            position: absolute;
+            top: 12px;          
+            right: 12px;        
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div id="web">My Website</div>
+        <div id="help">Home | About | Contact</div>
+    </div>
+
+    <div style="display: flex; gap: 45px; margin-top: 60px; justify-content: center;">
+        <div id="box1">
+            <div id="R">R</div>
+            <div class="name">Rahul</div>
+            <div class="vp">View Profile</div>
+            <div class="work">Web Developer</div>
+            <div class="quality">Builds modern websites using HTML & CSS.</div>
+            <div class="status">ONLINE</div>
+        </div>
+        <div id="box2">
+            <div id="N">N</div>
+            <div class="name">Neha</div>
+            <div class="vp">View Profile</div>
+            <div class="work">UI Designer</div>
+            <div class="quality">Designs clean and user-friendly interfaces.</div>
+            <div id="offline">OFFLINE</div>
+        </div>
+        <div id="box3">
+            <div id="A">A</div>
+            <div class="name">Aman</div>
+            <div class="vp">View Profile</div>
+            <div class="work">Backend Developer</div>
+            <div class="quality">Works with server logic and databases.</div>
+            <div class="status">ONLINE</div>
+        </div>
+</div>
+
+<div id="last">
+    <div>Help</div>
+</div>
+</body>
+</html>

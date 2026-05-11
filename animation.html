@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        height: 300px;
+        width: 300px;
+        background-color: rgb(245, 141, 153);
+        animation-name: PP;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        display: flex;
+        margin-top: 40px;
+        justify-content: center;
+    }
+    div:hover{
+        animation-play-state: running;
+    }
+    @keyframes PP {
+        0%{
+            height: 350px;
+            width: 300px;
+            background-color: pink;
+            border-radius: 40px;
+        }
+        25%{
+            height: 350px;
+            width: 300px;
+            background-color: rgb(185, 136, 145);
+            border-radius: 50px;
+        }
+        50%{
+            height: 450px;
+            width: 400px;
+            background-color: rgb(130, 67, 79);
+            border-radius: 60px;
+        }
+    }
+</style>
+<body>
+    <div>hiiiiiiiiiiiiiiiiiiiii</div>
+</body>
+</html>

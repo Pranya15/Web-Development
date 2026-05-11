@@ -1,0 +1,60 @@
+<html>
+    <head></head>
+    <style>
+        #p{
+             border: 5px solid rgb(255, 164, 164);
+            height: 400px;
+            width: 1000px;
+            margin: 20px auto;
+            position: relative;
+            
+        }
+        .one{
+            transition: 3s;
+        }
+        #one{
+            height: 100px;
+            width: 100px;
+            background-color: pink;
+            border-radius: 50%;
+            transition-timing-function:linear;
+            
+
+        }
+        #two{
+            height: 100px;
+            width: 100px;
+            background-color: skyblue;
+            border-radius: 50%;
+            transition-timing-function:ease-in;
+        }
+        #three{
+            height: 100px;
+            width: 100px;
+            background-color: lightgreen;
+            border-radius: 50%;
+            transition-timing-function:ease-out;
+        }
+        #four{
+            height: 100px;
+            width: 100px;
+            background-color: rgb(253, 126, 204);
+            border-radius: 50%;
+            /* transition-timing-function:ease-in-out; */
+            transition-timing-function:step-end;
+        }
+        #p:hover .one{
+            /* transform: translateX(900px); */
+            margin-left: 900px;
+        }
+    </style>
+    <body>
+        <div id="p">
+            <div id="one" class="one">N</div>
+            <div id="two" class="one">K</div>
+            <div id="three" class="one">Z</div>
+            <div id="four" class="one">T</div>
+
+        </div>
+    </body>
+</html>
