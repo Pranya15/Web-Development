@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Calculator</title>
+</head>
+
+<body class="bg-black flex items-center justify-center min-h-screen">
+
+  <div class="w-[350px] bg-black p-6 rounded-[30px]">
+
+    <!-- Input Display -->
+    <input
+      type="text"
+      id="display"
+      value=""
+      readonly
+      class="w-full h-32 bg-black text-white text-7xl text-right outline-none border-none font-light pr-4"
+    />
+
+    <!-- Buttons -->
+    <div class="grid grid-cols-4 gap-4">
+
+      <!-- Row 1 -->
+      <button onclick="clearDisplay()" class="h-16 rounded-2xl bg-[#151515] text-[#ff9f43] text-2xl">
+        AC
+      </button>
+
+      <button onclick="deleteLast()" class="h-16 rounded-2xl bg-[#151515] text-[#ff9f43] text-2xl">
+        ⌫
+      </button>
+
+      <button onclick="appendValue('%')" class="h-16 rounded-2xl bg-[#151515] text-[#ff9f43] text-2xl">
+        %
+      </button>
+
+      <button onclick="appendValue('/')" class="h-16 rounded-2xl bg-[#151515] text-[#ff9f43] text-3xl">
+        ÷
+      </button>
+
+      <!-- Row 2 -->
+      <button onclick="appendValue('7')" class="h-16 rounded-2xl bg-[#101010] text-[#d8ecff] text-3xl">
+        7
+      </button>
+
+      <button onclick="appendValue('8')" class="h-16 rounded-2xl bg-[#101010] text-[#d8ecff] text-3xl">
+        8
+      </button>
+
+      <button onclick="appendValue('9')" class="h-16 rounded-2xl bg-[#101010] text-[#d8ecff] text-3xl">
+        9
+      </button>
+
+      <button onclick="appendValue('*')" class="h-16 rounded-2xl bg-[#151515] text-[#ff9f43] text-3xl">
+        ×
+      </button>
+
+      <!-- Row 3 -->
+      <button onclick="appendValue('4')" class="h-16 rounded-2xl bg-[#101010] text-[#d8ecff] text-3xl">
+        4
+      </button>
+
+      <button onclick="appendValue('5')" class="h-16 rounded-2xl bg-[#101010] text-[#d8ecff] text-3xl">
+        5
+      </button>
+
+      <button onclick="appendValue('6')" class="h-16 rounded-2xl bg-[#101010] text-[#d8ecff] text-3xl">
+        6
+      </button>
+
+      <button onclick="appendValue('-')" class="h-16 rounded-2xl bg-[#151515] text-[#ff9f43] text-3xl">
+        −
+      </button>
+
+      <!-- Row 4 -->
+      <button onclick="appendValue('1')" class="h-16 rounded-2xl bg-[#101010] text-[#d8ecff] text-3xl">
+        1
+      </button>
+
+      <button onclick="appendValue('2')" class="h-16 rounded-2xl bg-[#101010] text-[#d8ecff] text-3xl">
+        2
+      </button>
+
+      <button onclick="appendValue('3')" class="h-16 rounded-2xl bg-[#101010] text-[#d8ecff] text-3xl">
+        3
+      </button>
+
+      <button onclick="appendValue('+')" class="h-16 rounded-2xl bg-[#151515] text-[#ff9f43] text-3xl">
+        +
+      </button>
+
+      <!-- Row 5 -->
+      <button onclick="appendValue('00')" class="h-16 rounded-2xl bg-[#101010] text-[#ff9f43] text-2xl">
+        00
+      </button>
+
+      <button onclick="appendValue('0')" class="h-16 rounded-2xl bg-[#101010] text-[#d8ecff] text-3xl">
+        0
+      </button>
+
+      <button onclick="appendValue('.')" class="h-16 rounded-2xl bg-[#101010] text-[#d8ecff] text-3xl">
+        .
+      </button>
+
+      <button onclick="calculate()" class="h-16 rounded-2xl bg-[#ff9f43] text-white text-3xl">
+        =
+      </button>
+
+    </div>
+  </div>
+
+  <script src="calculator.js"></script>
+
+</body>
+</html>
