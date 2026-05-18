@@ -1,0 +1,337 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rotating Circle Ball Game</title>
+  <style>
+    body{
+      margin:0;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      height:100vh;
+      background:black;
+      overflow:hidden;
+    }
+    canvas{
+      background:#111;
+      border:2px solid white;
+    }
+    #info{
+      color:#aaa;
+      font-family:sans-serif;
+      font-size:14px;
+      margin-top:8px;
+    }
+  </style>
+</head>
+<body>
+<canvas id="game"></canvas>
+<div id="info">Balls: <span id="ballCount">1</span></div>
+<script>
+const canvas = document.getElementById("game");
+const ctx = canvas.getContext("2d");
+canvas.width = 600;
+canvas.height = 600;
+const W = canvas.width, H = canvas.height;
+const centerX = W / 2, centerY = H / 2;
+const radius = 200;
+const GAP = 0.55;
+const MAX_BALLS = 40;
+let rotation = 0;
+
+function randomColor() {
+  return ["#ff4444","#ffdd44","#44ddff","#44ff88","#ff88cc","#ff8844","#ffffff","#aa88ff"][Math.floor(Math.random()*8)];
+}
+
+function makeBall(x, y, speed) {
+  let angle = Math.random() * Math.PI * 2;
+  let sp = speed || (3 + Math.random() * 3);
+  return {
+    x, y,
+    dx: Math.cos(angle) * sp,
+    dy: Math.sin(angle) * sp,
+    radius: 10,
+    color: randomColor(),
+    escaped: false
+  };
+}
+
+let balls = [makeBall(centerX, centerY, 4)];
+
+function isInGap(angle) {
+  let diff = angle - rotation;
+  diff = ((diff % (Math.PI * 2)) + Math.PI * 2) % (Math.PI * 2);
+  if (diff > Math.PI) diff -= Math.PI * 2;
+  return Math.abs(diff) < GAP;
+}
+
+function drawCircle() {
+  ctx.save();
+  ctx.translate(centerX, centerY);
+  ctx.rotate(rotation);
+  ctx.beginPath();
+  ctx.arc(0, 0, radius, GAP, Math.PI * 2 - GAP);
+  ctx.strokeStyle = "#ffdd44";
+  ctx.lineWidth = 6;
+  ctx.lineCap = "round";
+  ctx.stroke();
+  ctx.restore();
+}
+
+function update() {
+  ctx.clearRect(0, 0, W, H);
+  rotation += 0.022;
+
+  drawCircle();
+
+  let newBalls = [];
+
+  balls.forEach(ball => {
+    ball.x += ball.dx;
+    ball.y += ball.dy;
+
+    let dx = ball.x - centerX;
+    let dy = ball.y - centerY;
+    let dist = Math.sqrt(dx * dx + dy * dy);
+
+    if (!ball.escaped) {
+      if (dist + ball.radius >= radius) {
+        let angle = Math.atan2(dy, dx);
+        if (isInGap(angle)) {
+          // Ball escapes through gap
+          ball.escaped = true;
+          // Spawn 2 new balls inside if under limit
+          if (balls.length + newBalls.length < MAX_BALLS) {
+            newBalls.push(makeBall(centerX, centerY));
+            newBalls.push(makeBall(centerX, centerY));
+          }
+        } else {
+          // Proper normal vector reflection off wall
+          let nx = dx / dist, ny = dy / dist;
+          let dot = ball.dx * nx + ball.dy * ny;
+          ball.dx -= 2 * dot * nx;
+          ball.dy -= 2 * dot * ny;
+          // Push ball back inside wall
+          let overlap = (dist + ball.radius) - radius;
+          ball.x -= nx * overlap;
+          ball.y -= ny * overlap;
+        }
+      }
+    } else {
+      // Remove escaped ball once it goes off screen
+      if (ball.x < -50 || ball.x > W + 50 || ball.y < -50 || ball.y > H + 50) {
+        return; // drop ball from array
+      }
+    }
+
+    newBalls.push(ball);
+  });
+
+  balls = newBalls;
+
+  // Ball-ball collision — elastic bounce only, no spawning
+  for (let i = 0; i < balls.length; i++) {
+    for (let j = i + 1; j < balls.length; j++) {
+      let a = balls[i], b = balls[j];
+      let dx = a.x - b.x, dy = a.y - b.y;
+      let dist = Math.sqrt(dx * dx + dy * dy);
+      let minDist = a.radius + b.radius;
+      if (dist < minDist && dist > 0) {
+        let nx = dx / dist, ny = dy / dist;
+        // Separate overlapping balls
+        let overlap = (minDist - dist) / 2;
+        a.x += nx * overlap; a.y += ny * overlap;
+        b.x -= nx * overlap; b.y -= ny * overlap;
+        // Elastic velocity exchange
+        let dvx = a.dx - b.dx, dvy = a.dy - b.dy;
+        let dot = dvx * nx + dvy * ny;
+        if (dot < 0) {
+          a.dx -= dot * nx; a.dy -= dot * ny;
+          b.dx += dot * nx; b.dy += dot * ny;
+        }
+      }
+    }
+  }
+
+  // Draw all balls
+  balls.forEach(ball => {
+    ctx.beginPath();
+    ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
+    ctx.fillStyle = ball.color;
+    ctx.fill();
+  });
+
+  document.getElementById("ballCount").textContent = balls.length;
+  requestAnimationFrame(update);
+}
+
+update();
+</script>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ball Game</title>
+<style>
+  body { margin:0; background:black; display:flex; justify-content:center; align-items:center; height:100vh; }
+  canvas { background:#111; }
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<script>
+
+// --- SETUP ---
+const canvas = document.getElementById("c");
+const ctx = canvas.getContext("2d");
+canvas.width = 600;
+canvas.height = 600;
+
+const CX = 300; // center x
+const CY = 300; // center y
+const R  = 200; // circle radius
+const GAP = 0.55; // gap size (radians)
+
+let rotation = 0;
+let balls = [ newBall(CX, CY) ];
+
+// --- NEW BALL ---
+function newBall(x, y) {
+  let angle = Math.random() * Math.PI * 2;
+  let speed = 3 + Math.random() * 3;
+  let colors = ["red","yellow","cyan","lime","pink","orange","white"];
+  return {
+    x, y,
+    dx: Math.cos(angle) * speed,
+    dy: Math.sin(angle) * speed,
+    r: 10,
+    color: colors[Math.floor(Math.random() * colors.length)],
+    escaped: false
+  };
+}
+
+// --- IS BALL IN GAP? ---
+function inGap(angle) {
+  let diff = angle - rotation;
+  diff = ((diff % (Math.PI*2)) + Math.PI*2) % (Math.PI*2);
+  if (diff > Math.PI) diff -= Math.PI*2;
+  return Math.abs(diff) < GAP;
+}
+
+// --- DRAW ---
+function draw() {
+  ctx.clearRect(0, 0, 600, 600);
+
+  // Draw rotating circle with gap
+  ctx.save();
+  ctx.translate(CX, CY);
+  ctx.rotate(rotation);
+  ctx.beginPath();
+  ctx.arc(0, 0, R, GAP, Math.PI*2 - GAP);
+  ctx.strokeStyle = "yellow";
+  ctx.lineWidth = 6;
+  ctx.lineCap = "round";
+  ctx.stroke();
+  ctx.restore();
+
+  // Draw balls
+  balls.forEach(b => {
+    ctx.beginPath();
+    ctx.arc(b.x, b.y, b.r, 0, Math.PI*2);
+    ctx.fillStyle = b.color;
+    ctx.fill();
+  });
+}
+
+// --- UPDATE ---
+function update() {
+  rotation += 0.022;
+
+  let newBalls = [];
+
+  balls.forEach(b => {
+    // Move ball
+    b.x += b.dx;
+    b.y += b.dy;
+
+    if (!b.escaped) {
+      // Check if ball hit the wall
+      let dx   = b.x - CX;
+      let dy   = b.y - CY;
+      let dist = Math.sqrt(dx*dx + dy*dy);
+
+      if (dist + b.r >= R) {
+        let angle = Math.atan2(dy, dx);
+
+        if (inGap(angle)) {
+          // ESCAPE through gap → spawn 2 new balls
+          b.escaped = true;
+          if (balls.length < 10000) {
+            newBalls.push(newBall(CX, CY));
+            newBalls.push(newBall(CX, CY));
+          }
+        } else {
+          // BOUNCE off wall
+          let nx = dx / dist;
+          let ny = dy / dist;
+          let dot = b.dx*nx + b.dy*ny;
+          b.dx -= 2 * dot * nx;
+          b.dy -= 2 * dot * ny;
+          // Push back inside
+          let overlap = (dist + b.r) - R;
+          b.x -= nx * overlap;
+          b.y -= ny * overlap;
+        }
+      }
+
+    } else {
+      // Escaped ball: delete if off screen
+      if (b.x < -50 || b.x > 650 || b.y < -50 || b.y > 650) return;
+    }
+
+    newBalls.push(b);
+  });
+
+  balls = newBalls;
+
+  // Ball vs Ball collision (just bounce, no spawn)
+  for (let i = 0; i < balls.length; i++) {
+    for (let j = i+1; j < balls.length; j++) {
+      let a  = balls[i], b = balls[j];
+      let dx = a.x - b.x,  dy = a.y - b.y;
+      let dist = Math.sqrt(dx*dx + dy*dy);
+      if (dist < a.r + b.r && dist > 0) {
+        let nx  = dx/dist, ny = dy/dist;
+        let sep = (a.r + b.r - dist) / 2;
+        a.x += nx*sep; a.y += ny*sep;
+        b.x -= nx*sep; b.y -= ny*sep;
+        let dv  = (a.dx-b.dx)*nx + (a.dy-b.dy)*ny;
+        if (dv < 0) {
+          a.dx -= dv*nx; a.dy -= dv*ny;
+          b.dx += dv*nx; b.dy += dv*ny;
+        }
+      }
+    }
+  }
+}
+
+// --- GAME LOOP ---
+function loop() {
+  update();
+  draw();
+  requestAnimationFrame(loop);
+}
+
+loop();
+
+</script>
+</body>
+</html>
