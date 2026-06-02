@@ -131,56 +131,79 @@
 
 // export default App
 
-import { useEffect, useState } from "react";
-import "./App.css";
+// import { useEffect, useState } from "react";
+// import "./App.css";
+
+// const App = () => {
+
+//   const [products, setProducts] = useState([]);
+
+//   useEffect(() => {
+
+//     async function call() {
+
+//       let res = await fetch(
+//         "https://dummyjson.com/products"
+//       );
+
+//       let data = await res.json();
+
+//       setProducts(data.products);
+//     }
+
+//     call();
+
+//   }, []);
+
+//   return (
+//     <div className="container">
+
+//       <div className="card-container">
+
+//         {
+//           products.map((item) => (
+
+//             <div className="card" key={item.id}>
+
+//               <img
+//                 src={item.thumbnail}
+//                 alt=""
+//               />
+
+//               <h3>{item.title}</h3>
+
+//               <p>₹ {item.price}</p>
+
+
+//             </div>
+//           ))
+//         }
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default App;
+
+
+
+import NavBar from './NavBar.jsx'
+import Home from './Home.jsx'
+import About from './About.jsx'
+import Task from './Task.jsx'
+import { Routes, Route } from 'react-router-dom'
 
 const App = () => {
-
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-
-    async function call() {
-
-      let res = await fetch(
-        "https://dummyjson.com/products"
-      );
-
-      let data = await res.json();
-
-      setProducts(data.products);
-    }
-
-    call();
-
-  }, []);
-
   return (
-    <div className="container">
-
-      <div className="card-container">
-
-        {
-          products.map((item) => (
-
-            <div className="card" key={item.id}>
-
-              <img
-                src={item.thumbnail}
-                alt=""
-              />
-
-              <h3>{item.title}</h3>
-
-              <p>₹ {item.price}</p>
-
-
-            </div>
-          ))
-        }
-      </div>
+    <div>
+    <NavBar/>
+    <Routes>
+      <Route path='/' element={<Home/>}/>
+      <Route path='/about' element={<About/>}/>
+      <Route path='/task' element={<Task/>}/>
+    </Routes>
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
