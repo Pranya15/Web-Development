@@ -187,21 +187,36 @@
 
 
 
-import NavBar from './NavBar.jsx'
-import Home from './Home.jsx'
-import About from './About.jsx'
-import Task from './Task.jsx'
-import { Routes, Route } from 'react-router-dom'
+// import NavBar from './NavBar.jsx'
+// import Home from './Home.jsx'
+// import About from './About.jsx'
+// import Task from './Task.jsx'
+// import { Routes, Route } from 'react-router-dom'
+
+// const App = () => {
+//   return (
+//     <div>
+//     <NavBar/>
+//     <Routes>
+//       <Route path='/' element={<Home/>}/>
+//       <Route path='/about' element={<About/>}/>
+//       <Route path='/task' element={<Task/>}/>
+//     </Routes>
+//     </div>
+//   )
+// }
+
+// export default App
+
+//import React from 'react'
+import Todo from './Todo.jsx'
+// import { useState } from 'react';
+// import { useEffect } from 'react';
 
 const App = () => {
   return (
     <div>
-    <NavBar/>
-    <Routes>
-      <Route path='/' element={<Home/>}/>
-      <Route path='/about' element={<About/>}/>
-      <Route path='/task' element={<Task/>}/>
-    </Routes>
+      <Todo/>
     </div>
   )
 }
